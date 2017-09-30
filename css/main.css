@@ -1,0 +1,96 @@
+body {
+    background-color: #D0E9F1;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4A4A4A;
+    font-size: 20px;
+    text-align:center;
+
+}
+
+/* cart icon */
+.cart {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  
+}
+
+/* cart icon */
+.icon-bar {
+    width: 100%; /* Full-width */
+}
+
+.icon-bar a {
+    float: right; /* Float links side by side */
+    transition: all 0.3s ease; /* Add transition for hover effects */
+}
+
+.icon-bar a:hover {
+    border-radius: 3px;
+    background-color: #A5D4E3; /* Add a hover color */
+}
+
+.active {
+    background-color: #D0E9F1; /* Add an active/current color */
+}
+
+/* main logo */
+.main-logo {
+    max-height: 103px;
+    display: block;
+    margin: auto;
+    padding-top: 150px;
+
+}
+
+/* pillow icon */
+.pillow-icon {
+    max-height: 100px;
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* button style */
+.button {
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+.button-shop {
+    background: #F4320F;
+    color: #FFFFFF;
+    border-radius: 8px;/* Add transition for hover effects */
+    display:block;
+    margin:auto;
+    margin-top: 150px; 
+}
+
+.button-shop:hover {
+    background-color: #D0021B; /* Add a hover color */
+}
+
+/*bottom bar style*/
+.bottom-quote {
+    display:block;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+
+
+
+
