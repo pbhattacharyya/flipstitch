@@ -2,17 +2,25 @@ body {
     background-color: #D0E9F1;
 }
 
+a {
+    text-decoration: none;
+}
+
 h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
     color: #4A4A4A;
     font-size: 20px;
     text-align:center;
-
 }
 
-/* cart icon */
-.cart {
+/* top bar icons */
+.top-bar-icon-right {
     width: 30px;
+    padding: 8px;
+  
+}
+.top-bar-icon-left {
     height: 30px;
     padding: 8px;
   
@@ -31,6 +39,14 @@ h2 {
 .icon-bar a:hover {
     border-radius: 3px;
     background-color: #A5D4E3; /* Add a hover color */
+}
+
+.icon-bar .right {
+    float: right; 
+}
+
+.icon-bar .left {
+    float: left; 
 }
 
 .active {
@@ -89,7 +105,26 @@ h2 {
     padding-top: 30px;
 }
 
+.prompt-text {
+    display:block;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 15px;
+}
 
+.prompt-text .step {
+    color:  #F4320F;
+    display: in-line;
+}
+
+/*floating tiles*/
+.floating-box {
+    display: inline-block;
+    width: 150px;
+    height: 75px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
 
 
 
