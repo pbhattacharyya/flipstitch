@@ -14,6 +14,20 @@ h2 {
     text-align:center;
 }
 
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: #4A4A4A;
+    font-size: 16px;
+    text-align:left;
+}
+
+.product-detail  {
+    padding-top:20px;
+    padding-right: 30px;
+}
+
+
 /* top bar icons */
 .top-bar-icon-right {
     width: 30px;
@@ -84,6 +98,49 @@ h2 {
     cursor: pointer;
 }
 
+.remove-button {
+    border: none;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color:  #D0E9F1;
+    color:  #4A4A4A;
+    display: inline;
+}
+
+.remove-button:hover {
+    border-radius: 3px;
+    background-color: #A5D4E3;
+}
+
+
+.nav-button {
+    border: none;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color:  #D0E9F1;
+    color:  #4A4A4A;
+    display: inline;
+}
+
+.nav-button:hover {
+    border-radius: 3px;
+    background-color: #A5D4E3;
+}
+
 .button .text-button {
     border: none;
     padding: 10px 32px;
@@ -141,6 +198,7 @@ h2 {
     cursor: pointer;
     border: 2px solid white;
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .floating-box:hover {
@@ -149,6 +207,11 @@ h2 {
 }
 
 .floating-box:active {
+    border: 2px solid #F4320F;
+    border-radius: 5px;
+}
+
+.floating-box:target {
     border: 2px solid #F4320F;
     border-radius: 5px;
 }
@@ -169,7 +232,7 @@ h2 {
     padding-top: 15px;
 }
 
-.box-heading-left {
+.floating-box .top-panel .box-heading-left {
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 30px;
 color: #FFFFFF;
@@ -179,7 +242,7 @@ padding-top: 5px;
 display: inline-block;
 }
 
-.box-heading-right {
+.floating-box .top-panel .box-heading-right {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     color: #BDBDBD;
@@ -188,6 +251,30 @@ display: inline-block;
     padding-top: 10px;
     float:right;
     }
+
+    .floating-box-home {
+        width: 400px;
+        height: 300px;
+        margin: 30px;
+        border: 2px solid white;
+        border-radius: 3px;
+        background-color: transparent;
+        overflow: hidden;
+    }
+
+    .floating-box-home:hover {
+        border: 2px solid white;
+    }
+
+    #product-info-box-top-panel{
+        width: 400px;
+    }
+
+    #backgroundimage {
+        max-width: 100%; 
+        height: auto;
+    }
+
 
 /* text area icons */
 .text-box {
@@ -198,5 +285,46 @@ display: inline-block;
     font-weight: 100;
 }
 
+/* product box */
 
+.product-box {
+    display: inline-block;
+    width: 720px;
+    height: 280px;
+    margin: 10px;
+    background-color: #D0E9F1;
+    border-radius: 5px;
+}
+
+.product-box .image {
+    float:left;
+    padding:10px;
+    padding-right:30px;
+    display: inline-block;
+    margin: auto;
+    max-height:260px;
+}
+.product-box .text-area {
+    float:left;
+    padding:10px 10px 10px 0px;
+    display: inline-block;
+    margin: auto;
+}
+
+.product-box .text-area .box-heading-left {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color:#4A4A4A;
+    }
+
+.product-box .text-area .box-heading-right {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: #4A4A4A;
+    font-style:light;
+    padding-left:30px;
+    padding-top:5px;
+    float:right;
+    text-align:right;
+    }
 
