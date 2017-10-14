@@ -4,6 +4,10 @@
         <title>Shop page</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+            <!-- jquery -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!-- javascript -->
+        <script src="js/main.js" type="text/javascript"></script>
 
     </head>
     <body>
@@ -17,14 +21,7 @@
                 </span>
             </div>
             <div class="prompt-text"> 
-                <h2 class="step">
-                    STEP 1
-                </h2>
-                <h2>
-                    Choose a type.
-                </h2>
-                    <div class="floating-box">
-                            <a class="active">
+                    <div id="couch-pillow-box" class="floating-box">
                                 <div class = "top-panel">
                                     <span class="box-heading-left">
                                         Couch pillow
@@ -33,12 +30,54 @@
                                         $29
                                     </span>
                                 </div>
-                                <img id="backgroundimage" src="img/couch-pillow-background.jpg" border="0" alt="">
-                                
-                            </a>
+                                <img class="backgroundimage" src="img/couch-pillow-background.jpg" border="0" alt="">
+                                <div class="text-box">
+                                    Shape:<br>
+                                    <ul id="shape" class="shape-choice">
+                                        <li>
+                                            <input type="radio" id="square" name="amount" checked="checked" />
+                                            <label for="square">square</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="round" name="amount" />
+                                            <label for="round">round</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="cat" name="amount"/>
+                                            <label for="cat">cat</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="dog" name="amount" />
+                                            <label for="dog">dog</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="bear" name="amount" />
+                                            <label for="bear">bear</label>
+                                        </li>
+                                        <li>
+                                                <input type="radio" id="bunny" name="amount" />
+                                                <label for="bunny">bunny</label>
+                                        </li>
+                                        <li>
+                                                    <input type="radio" id="custom" name="amount" />
+                                                    <label for="custom">custom</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="forms">
+                                    <form class="text-box">
+                                        Quantity: <br>
+                                            <textarea id="shape" name="message" rows="1" cols="2" style="margin-top: 5px">1</textarea> <!--  -->
+                                    </form>
+                                    <form class="text-box">
+                                        Special requests: <br>
+                                            <textarea id="customization" name="message" rows="3" cols="40" style="margin-top: 5px"></textarea> <!--   -->
+                                    </form>
+                                </div>
+                                <button id="add-to-cart" class="button button-shop item-button">ADD TO CART</button>
                     </div>
 
-                    <div class="floating-box">
+                    <div id="bed-pillow-box" class="floating-box">
                             <a class="active">
                                 <div class = "top-panel">
                                     <span class="box-heading-left">
@@ -48,12 +87,12 @@
                                         $39
                                     </span>
                                 </div>
-                                <img id="backgroundimage" src="img/bed-pillow-background.jpg" border="0" alt="">
+                                <img class="backgroundimage" src="img/bed-pillow-background.jpg" border="0" alt="">
                                 
                             </a>
                     </div>
 
-                    <div class="floating-box">
+                    <div id="floor-pouf-pillow-box" class="floating-box">
                             <a class="active">
                                 <div class = "top-panel">
                                     <span class="box-heading-left">
@@ -63,115 +102,13 @@
                                         $49
                                     </span>
                                 </div>
-                                <img id="backgroundimage" src="img/floor-pillow-background.jpg" border="0" alt="">
+                                <img class="backgroundimage" src="img/floor-pillow-background.jpg" border="0" alt="">
                                 
                             </a>
                     </div>
                 </div>
 
-            <div class="prompt-text"> 
-                    <h2 class="step">
-                        STEP 2
-                    </h2>
-                    <h2>
-                        Now choose a shape.
-                    </h2>
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Square
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/square pillow.jpg">
-                            </a>
-                    </div>
-    
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Round
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/round pillow.jpeg">
-                            </a>
-                    </div>
-    
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Dog
-                                    </span>
-                                    <span class="box-heading-right">
-                                        +$10
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/dog pillow.jpg">
-                            </a>
-                    </div>
-
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Cat
-                                    </span>
-                                    <span class="box-heading-right">
-                                        +$10
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/cat pillow.jpg">
-                            </a>
-                    </div>
-
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Bear
-                                    </span>
-                                    <span class="box-heading-right">
-                                        +$10
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/bear pillow.jpeg">
-                            </a>
-                    </div>
-
-                    <div class="floating-box">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Bunny
-                                    </span>
-                                    <span class="box-heading-right">
-                                        +$10
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/bunny pillow.jpg">
-                            </a>
-                    </div>
-
-                    <div class="floating-box" style="height:400px">
-                            <a class="active">
-                                <div class = "top-panel">
-                                    <span class="box-heading-left">
-                                        Custom
-                                    </span>
-                                    <span class="box-heading-right">
-                                        +$10-30
-                                    </span>
-                                </div>
-                                <img class="pillow-pic" src="img/custom pillow.jpg">
-                                <form class="text-box">
-                                    Describe your desired shape:<br>
-                                    <textarea name="message" rows="4" cols="51" style="margin-top: 20px"></textarea>
-                                </form>
-                            </a>
-                    </div>
-                    <a href="cart.html"><button class="button button-shop" style="margin-top:50px">ADD TO CART</button></a>
+                    <a href="cart.html"><button class="button button-shop" style="margin-top:50px">GO TO CART</button></a>
                     <div class="bottom-quote"> 
                             <h2>Sleep tight. Live well.</h2>
                         </div>
