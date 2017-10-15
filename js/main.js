@@ -1,7 +1,7 @@
 /* constructors */
 
 function CouchPillow(shape, quantity, custom, ordered) {
-    this.name = "Couch Pillow"; 
+    this.name = "Couch pillow"; 
     this.shape = shape;
     this.quantity = quantity;
     this.unitPrice = 29;
@@ -12,7 +12,7 @@ function CouchPillow(shape, quantity, custom, ordered) {
   } 
 
 function BedPillow(shape, quantity, custom, ordered) {
-    this.name = "Bed Pillow"; 
+    this.name = "Bed pillow"; 
     this.shape = shape;
     this.quantity = quantity;
     this.unitPrice = 39;
@@ -23,7 +23,7 @@ function BedPillow(shape, quantity, custom, ordered) {
   }  
 
   function FloorPillow(shape, quantity, custom, ordered) {
-    this.name = "Floor Pouf Pillow"; 
+    this.name = "Floor pouf pillow"; 
     this.shape = shape;
     this.quantity = quantity;
     this.unitPrice = 49;
@@ -47,9 +47,7 @@ function BedPillow(shape, quantity, custom, ordered) {
 
 
 $(document).ready(function() { 
-    console.log("JS");
-
-/* When couch pillow box on the product page is clicked */
+    /* When couch pillow box on the product page is clicked */
     $("#couch-pillow-box").click(function() {
         console.log("couch pillow expand"); /*test*/
         $("#couch-pillow-box").css("width", "670px").css("cursor", "default"); /* to enlarge the box and change the cursor*/
@@ -62,7 +60,7 @@ $(document).ready(function() {
             if (couchPillowAdded == false)
             {
                 couchPillowAdded = true; /* to remember that at least one couch pillow has been added */
-                shape = $("#couch-pillow-box #shape :radio:checked").attr('id'); /* to retrieve the shape specified by the user */
+                shape = $("#couch-pillow-box #shape :radio:checked").attr('value'); /* to retrieve the shape specified by the user */
                 quantity = parseInt($("#couch-pillow-box #quantity").val()); /* to retrieve the quantity specified by the user and turn it into a number */
                 custom = $("#couch-pillow-box textarea#custom").val(); /* to retrieve any special comments the user left regarding customization */
                 pillowOrder = JSON.stringify(new CouchPillow(shape, quantity, custom, couchPillowAdded)); /* to create a string of a CouchPillow object */
@@ -73,7 +71,7 @@ $(document).ready(function() {
         });
     });
 
-/* When bed pillow box on the product page is clicked */
+    /* When bed pillow box on the product page is clicked */
     $("#bed-pillow-box").click(function() {
         console.log("bed pillow expand"); /*test*/
         $("#bed-pillow-box").css("width", "670px").css("cursor", "default"); /* to enlarge the box and change the cursor*/
@@ -86,7 +84,7 @@ $(document).ready(function() {
             if (bedPillowAdded == false)
             {
                 bedPillowAdded = true; /* to remember that at least one bed pillow has been added */
-                shape = $("#bed-pillow-box #shape :radio:checked").attr('id'); /* to retrieve the shape specified by the user */
+                shape = $("#bed-pillow-box #shape :radio:checked").attr('value'); /* to retrieve the shape specified by the user */
                 quantity = parseInt($("#bed-pillow-box #quantity").val()); /* to retrieve the quantity specified by the user and turn it into a number */
                 custom = $("#bed-pillow-box textarea#custom").val(); /* to retrieve any special comments the user left regarding customization */
                 pillowOrder = JSON.stringify(new BedPillow(shape, quantity, custom, bedPillowAdded)); /* to create a string of a BedPillow object */
@@ -97,7 +95,7 @@ $(document).ready(function() {
         });
     });
 
-/* When floor pouf pillow box on the product page is clicked */
+    /* When floor pouf pillow box on the product page is clicked */
     $("#floor-pillow-box").click(function() {
         console.log("floor pillow expand"); /*test*/
         $("#floor-pillow-box").css("width", "670px").css("cursor", "default"); /* to enlarge the box and change the cursor*/
@@ -110,7 +108,7 @@ $(document).ready(function() {
             if (floorPillowAdded == false)
             {
                 floorPillowAdded = true; /* to remember that at least one floor pillow has been added */
-                shape = $("#floor-pillow-box #shape :radio:checked").attr('id'); /* to retrieve the shape specified by the user */
+                shape = $("#floor-pillow-box #shape :radio:checked").attr('value'); /* to retrieve the shape specified by the user */
                 quantity = parseInt($("#floor-pillow-box #quantity").val()); /* to retrieve the quantity specified by the user and turn it into a number */
                 custom = $("#floor-pillow-box textarea#custom").val(); /* to retrieve any special comments the user left regarding customization */
                 pillowOrder = JSON.stringify(new FloorPillow(shape, quantity, custom, floorPillowAdded)); /* to create a string of a FloorPillow object */
@@ -121,4 +119,14 @@ $(document).ready(function() {
         });
     });
     
+});
+
+/* When cart is loaded */
+$("cart").ready(function() {
+    var CouchPillow, BedPillow, FloorPillow;
+    CouchPillow = JSON.parse(localStorage.getItem("couchPillow"));
+    BedPillow = JSON.parse(localStorage.getItem("bedPillow"));
+    FloorPillow = JSON.parse(localStorage.getItem("floorPillow"));
+    console.log(CouchPillow);
+
 });
