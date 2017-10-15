@@ -35,31 +35,31 @@
                                     Shape:<br>
                                     <ul id="shape" class="shape-choice">
                                         <li>
-                                            <input type="radio" id="square" name="pillow-shape" checked="checked" />
+                                            <input type="radio" id="square" name="couch-pillow-shape" checked="checked" />
                                             <label for="square">square</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="round" name="pillow-shape" />
+                                            <input type="radio" id="round" name="couch-pillow-shape" />
                                             <label for="round">round</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="cat" name="pillow-shape"/>
+                                            <input type="radio" id="cat" name="couch-pillow-shape"/>
                                             <label for="cat">cat</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="dog" name="pillow-shape" />
+                                            <input type="radio" id="dog" name="couch-pillow-shape" />
                                             <label for="dog">dog</label>
                                         </li>
                                         <li>
-                                            <input type="radio" id="bear" name="pillow-shape" />
+                                            <input type="radio" id="bear" name="couch-pillow-shape" />
                                             <label for="bear">bear</label>
                                         </li>
                                         <li>
-                                                <input type="radio" id="bunny" name="pillow-shape" />
+                                                <input type="radio" id="bunny" name="couch-pillow-shape" />
                                                 <label for="bunny">bunny</label>
                                         </li>
                                         <li>
-                                                    <input type="radio" id="custom" name="pillow-shape" />
+                                                    <input type="radio" id="custom" name="couch-pillow-shape" />
                                                     <label for="custom">custom</label>
                                         </li>
                                     </ul>
@@ -78,7 +78,6 @@
                     </div>
 
                     <div id="bed-pillow-box" class="floating-box">
-                            <a class="active">
                                 <div class = "top-panel">
                                     <span class="box-heading-left">
                                         Bed pillow
@@ -88,12 +87,53 @@
                                     </span>
                                 </div>
                                 <img class="backgroundimage" src="img/bed-pillow-background.jpg" border="0" alt="">
-                                
-                            </a>
+                                <div class="text-box">
+                                    Shape:<br>
+                                    <ul id="shape" class="shape-choice">
+                                        <li>
+                                            <input type="radio" id="square" name="bed-pillow-shape" checked="checked" />
+                                            <label for="square">square</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="round" name="bed-pillow-shape" />
+                                            <label for="round">round</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="cat" name="bed-pillow-shape"/>
+                                            <label for="cat">cat</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="dog" name="bed-pillow-shape" />
+                                            <label for="dog">dog</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="bear" name="bed-pillow-shape" />
+                                            <label for="bear">bear</label>
+                                        </li>
+                                        <li>
+                                                <input type="radio" id="bunny" name="bed-pillow-shape" />
+                                                <label for="bunny">bunny</label>
+                                        </li>
+                                        <li>
+                                                    <input type="radio" id="custom" name="bed-pillow-shape" />
+                                                    <label for="custom">custom</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="forms">
+                                    <form class="text-box">
+                                        Quantity: <br>
+                                            <textarea id="quantity" name="number" rows="1" cols="2" style="margin-top: 5px">1</textarea> <!--  -->
+                                    </form>
+                                    <form class="text-box">
+                                        Special requests: <br>
+                                            <textarea id="custom" name="message" rows="3" cols="40" style="margin-top: 5px">blah</textarea> <!--   -->
+                                    </form>
+                                </div>
+                                <button id="add-to-cart" class="button button-shop item-button">ADD TO CART</button>
                     </div>
 
-                    <div id="floor-pouf-pillow-box" class="floating-box">
-                            <a class="active">
+                    <div id="floor-pillow-box" class="floating-box">
                                 <div class = "top-panel">
                                     <span class="box-heading-left">
                                         Floor pouf pillow
@@ -103,8 +143,50 @@
                                     </span>
                                 </div>
                                 <img class="backgroundimage" src="img/floor-pillow-background.jpg" border="0" alt="">
-                                
-                            </a>
+                                <div class="text-box">
+                                    Shape:<br>
+                                    <ul id="shape" class="shape-choice">
+                                        <li>
+                                            <input type="radio" id="square" name="floor-pillow-shape" checked="checked" />
+                                            <label for="square">square</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="round" name="floor-pillow-shape" />
+                                            <label for="round">round</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="cat" name="floor-pillow-shape"/>
+                                            <label for="cat">cat</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="dog" name="floor-pillow-shape" />
+                                            <label for="dog">dog</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="bear" name="floor-pillow-shape" />
+                                            <label for="bear">bear</label>
+                                        </li>
+                                        <li>
+                                                <input type="radio" id="bunny" name="floor-pillow-shape" />
+                                                <label for="bunny">bunny</label>
+                                        </li>
+                                        <li>
+                                                    <input type="radio" id="custom" name="floor-pillow-shape" />
+                                                    <label for="custom">custom</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="forms">
+                                    <form class="text-box">
+                                        Quantity: <br>
+                                            <textarea id="quantity" name="number" rows="1" cols="2" style="margin-top: 5px">1</textarea> <!--  -->
+                                    </form>
+                                    <form class="text-box">
+                                        Special requests: <br>
+                                            <textarea id="custom" name="message" rows="3" cols="40" style="margin-top: 5px">blah</textarea> <!--   -->
+                                    </form>
+                                </div>
+                                <button id="add-to-cart" class="button button-shop item-button">ADD TO CART</button>
                     </div>
                 </div>
 
