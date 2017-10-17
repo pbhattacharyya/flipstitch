@@ -204,7 +204,7 @@ $(document).ready(function() {
         totalUpdate();
     });
 
-    /* to update intro text */
+    /* to update intro text on cart page */
     function totalUpdate() {
         var qtySentence, priceSentence;
         if (totalQty == 0)
