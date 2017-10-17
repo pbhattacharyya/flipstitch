@@ -44,6 +44,11 @@ function BedPillow(shape, quantity, custom, ordered) {
 
   var floorPillowAdded = false; /* to keep track of whether a floor pillow was added */
 
+  var grandTotal = 0; /* total price of items in cart */
+
+  var totalQty = 0; /* total price of items in cart */
+  
+
 
 
 $(document).ready(function() { 
@@ -118,15 +123,99 @@ $(document).ready(function() {
             }
         });
     });
-    
+
+
+    /* When cart page is loaded */
+    var currentCouchPillow, currentBedPillow, currentFloorPillow;
+    currentCouchPillow = JSON.parse(localStorage.getItem("couchPillow"));
+    currentBedPillow = JSON.parse(localStorage.getItem("bedPillow"));
+    currentFloorPillow = JSON.parse(localStorage.getItem("floorPillow"));
+    console.log(currentCouchPillow);
+
+    /* Displays Couch pillow if that is part of the order */
+    if (currentCouchPillow.order)
+    {
+        $("#couch-pillow-cart").css({display: ""});
+        $("#couch-pillow-cart #total-price").text("$" + currentCouchPillow.totalPrice);
+        grandTotal += currentCouchPillow.totalPrice;
+        totalQty += currentCouchPillow.quantity;
+        $("#couch-pillow-cart #product-shape").text(currentCouchPillow.shape); 
+        $("#couch-pillow-cart #product-unit-price").text("$" + currentCouchPillow.unitPrice); 
+        $("#couch-pillow-cart #product-quantity").text(currentCouchPillow.quantity); 
+        $("#couch-pillow-cart #product-custom").text(currentCouchPillow.custom); 
+        totalUpdate();
+    }
+
+        /* Displays bed pillow if that is part of the order */
+    if (currentBedPillow.order)
+    {
+        $("#bed-pillow-cart").css({display: ""});
+        $("#bed-pillow-cart #total-price").text("$" + currentBedPillow.totalPrice);
+        grandTotal += currentBedPillow.totalPrice;
+        totalQty += currentBedPillow.quantity;
+        $("#bed-pillow-cart #product-shape").text(currentBedPillow.shape); 
+        $("#bed-pillow-cart #product-unit-price").text("$" + currentBedPillow.unitPrice); 
+        $("#bed-pillow-cart #product-quantity").text(currentBedPillow.quantity); 
+        $("#bed-pillow-cart #product-custom").text(currentBedPillow.custom); 
+        totalUpdate();
+    }
+
+        /* Displays floor pouf pillow if that is part of the order */
+    if (currentFloorPillow.order)
+    {
+        $("#floor-pillow-cart").css({display: ""});
+        $("#floor-pillow-cart #total-price").text("$" + currentFloorPillow.totalPrice);
+        grandTotal += currentFloorPillow.totalPrice;
+        totalQty += currentFloorPillow.quantity;
+        $("#floor-pillow-cart #product-shape").text(currentFloorPillow.shape); 
+        $("#floor-pillow-cart #product-unit-price").text("$" + currentFloorPillow.unitPrice); 
+        $("#floor-pillow-cart #product-quantity").text(currentFloorPillow.quantity); 
+        $("#floor-pillow-cart #product-custom").text(currentFloorPillow.custom); 
+        totalUpdate();
+    }
+
+    /* to remove couch pillow from the order */
+    $("#couch-pillow-cart #delete-from-cart").click(function() {
+        grandTotal -= currentCouchPillow.totalPrice;
+        totalQty -= currentCouchPillow.quantity;
+        pillowOrder = JSON.stringify(new CouchPillow("round", 1, "custom", false)); /* to create a string of a CouchPillow object */
+        localStorage.setItem("couchPillow", pillowOrder); 
+        $("#couch-pillow-cart").css({display: "none"});
+        totalUpdate();
+    });
+
+    /* to remove bed pillow from the order */
+    $("#bed-pillow-cart #delete-from-cart").click(function() {
+        grandTotal -= currentBedPillow.totalPrice;
+        totalQty -= currentBedPillow.quantity;
+        pillowOrder = JSON.stringify(new BedPillow("round", 1, "custom", false)); /* to create a string of a CouchPillow object */
+        localStorage.setItem("bedPillow", pillowOrder); 
+        $("#bed-pillow-cart").css({display: "none"});
+        totalUpdate();
+    });
+
+    /* to remove couch pillow from the order */
+    $("#floor-pillow-cart #delete-from-cart").click(function() {
+        grandTotal -= currentFloorPillow.totalPrice;
+        totalQty += currentFloorPillow.quantity;
+        pillowOrder = JSON.stringify(new FloorPillow("round", 1, "custom", false)); /* to create a string of a CouchPillow object */
+        localStorage.setItem("floorPillow", pillowOrder); 
+        $("#floor-pillow-cart").css({display: "none"});
+        totalUpdate();
+    });
+
+    /* to update intro text */
+    function totalUpdate() {
+        var qtySentence, priceSentence;
+        if (totalQty == 0)
+            qtySentence = "There are no items in your cart.";
+        else if (totalQty == 1)
+            qtySentence = "There is 1 item in your cart.";
+        else
+        qtySentence = "There are " + totalQty + " items in your cart.";
+        
+        priceSentence = "Your total is $" + grandTotal +".";
+        $("#cart-intro").text(qtySentence + " " + priceSentence);
+    }
 });
 
-/* When cart is loaded */
-$("cart").ready(function() {
-    var CouchPillow, BedPillow, FloorPillow;
-    CouchPillow = JSON.parse(localStorage.getItem("couchPillow"));
-    BedPillow = JSON.parse(localStorage.getItem("bedPillow"));
-    FloorPillow = JSON.parse(localStorage.getItem("floorPillow"));
-    console.log(CouchPillow);
-
-});

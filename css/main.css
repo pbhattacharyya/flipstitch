@@ -345,9 +345,10 @@ display: inline-block;
 
 .product-box {
     display: inline-block;
-    width: 720px;
+    width: 690px;
     height: 280px;
     margin: 10px;
+    margin-right: 100px;
     background-color: #D0E9F1;
     border-radius: 5px;
 }
