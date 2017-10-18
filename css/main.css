@@ -22,6 +22,14 @@ p {
     text-align:left;
 }
 
+.inline-text {
+    display: inline;
+}
+
+.invisible-on-load {
+    display:none;
+}
+
 .product-detail  {
     padding-top:20px;
     padding-right: 30px;
@@ -154,6 +162,13 @@ p {
     cursor: pointer;
 }
 
+.bottom-button {
+    margin-bottom: 50px;
+}
+
+.top-button {
+    margin-top: 50px;
+} 
 
 .button-shop {
     background: #F4320F;
@@ -192,6 +207,10 @@ p {
     display: in-line;
 }
 
+.step-left {
+    text-align:left;
+}
+
 /*floating tiles*/
 .floating-box {
     display: inline-block;
@@ -211,6 +230,10 @@ p {
     
 }
 
+.description-pillow-text {
+    margin-right:30px; 
+    display:block;
+}
 
 .floating-box .top-panel {
     position: relative;
@@ -264,6 +287,10 @@ display: inline-block;
 
     #product-info-box-top-panel{
         width: 400px;
+    }
+
+    .textarea-top {
+        margin-top: 5px;
     }
 
 
