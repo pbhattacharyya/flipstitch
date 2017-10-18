@@ -197,7 +197,7 @@ $(document).ready(function() {
     /* to remove couch pillow from the order */
     $("#floor-pillow-cart #delete-from-cart").click(function() {
         grandTotal -= currentFloorPillow.totalPrice;
-        totalQty += currentFloorPillow.quantity;
+        totalQty -= currentFloorPillow.quantity;
         pillowOrder = JSON.stringify(new FloorPillow("round", 1, "custom", false)); /* to create a string of a CouchPillow object */
         localStorage.setItem("floorPillow", pillowOrder); 
         $("#floor-pillow-cart").css({display: "none"});
