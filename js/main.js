@@ -131,6 +131,7 @@ $(document).ready(function() {
     currentBedPillow = JSON.parse(localStorage.getItem("bedPillow"));
     currentFloorPillow = JSON.parse(localStorage.getItem("floorPillow"));
     console.log(currentCouchPillow);
+    $(".invisible-on-load").css({display: "none"});
 
     /* Displays Couch pillow if that is part of the order */
     if (currentCouchPillow.order)
