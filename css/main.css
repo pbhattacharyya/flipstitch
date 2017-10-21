@@ -1,3 +1,5 @@
+/* HTML element styles */
+
 body {
     background-color: #D0E9F1;
 }
@@ -22,6 +24,11 @@ p {
     text-align:left;
 }
 
+textarea {
+    resize: none;
+ }
+
+ /* broad text styles */
 .inline-text {
     display: inline;
 }
@@ -38,7 +45,7 @@ p {
 
 /* top bar icons */
 .top-bar-icon-right {
-    width: 30px;
+    width: 40px;
     padding: 8px;
   
 }
@@ -162,8 +169,9 @@ p {
     cursor: pointer;
 }
 
-.bottom-button {
-    margin-bottom: 50px;
+#spacing{
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .top-button {
@@ -211,7 +219,7 @@ p {
     text-align:left;
 }
 
-/*floating tiles*/
+/*floating tiles styles */
 .floating-box {
     display: inline-block;
     width: 400px;
@@ -235,7 +243,7 @@ p {
     display:block;
 }
 
-.floating-box .top-panel {
+.top-panel {
     position: relative;
     top:0px;
     width: 400px;
@@ -244,24 +252,34 @@ p {
     border-radius: 3px 3px 0 0;
 }
 
-.floating-box .pillow-pic {
+.pillow-pic {
     display: block;
     margin: auto;
     width:60%;
     padding-top: 15px;
 }
 
-.floating-box .top-panel .box-heading-left {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 30px;
-color: #FFFFFF;
-padding-left:10px;
-margin-top: 0px;
-padding-top: 5px;
-display: inline-block;
+.top-panel .box-heading-left {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-left:10px;
+    margin-top: 0px;
+    padding-top: 5px;
+    display: inline-block;
 }
 
-.floating-box .top-panel .box-heading-right {
+.top-panel .home-page-heading {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: #4A4A4A;
+    padding-left:10px;
+    margin-top: 0px;
+    padding-top: 5px;
+    display: inline-block;
+    }
+
+.top-panel .box-heading-right {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     color: #BDBDBD;
@@ -271,92 +289,96 @@ display: inline-block;
     float:right;
     }
 
-    .floating-box-home {
-        width: 400px;
-        height: 300px;
-        margin: 30px;
-        border: 2px solid white;
-        border-radius: 3px;
-        background-color: transparent;
-        overflow: hidden;
+.floating-box-home {
+    width: 400px;
+    height: 300px;
+    margin: 20px;
+    background-color: transparent;
+    overflow: hidden;
+    display: inline-block;
+    background-color: white;
+    cursor: pointer;
+    border: 10px solid #D0E9F1;
+    
+}
+
+.floating-box-home:hover {
+    border: 10px solid rgb(177, 199, 206);
     }
 
-    .floating-box-home:hover {
-        border: 2px solid white;
-    }
+#product-info-box-top-panel{
+    width: 400px;
+    background-color: #D0E9F1;
+}
 
-    #product-info-box-top-panel{
-        width: 400px;
-    }
-
-    .textarea-top {
-        margin-top: 5px;
-    }
+.textarea-top {
+    margin-top: 5px;
+}
 
 
-    /* formatting for shape selection on products page */
-    .backgroundimage {
-        max-height: 100%; 
-        width: auto;
-    }
+/* formatting for shape selection on products page */
+.backgroundimage {
+    max-height: 100%; 
+    width: auto;
+}
 
-    .shape-choice {
-        list-style-type:none;
-   
-   }
-   
-   .shape-choice li {
-        float:left;
-        margin:0 5px 5px 0;
-       width:70px;
-       height:30px;
-       position:relative;
-       text-align: center;
-   }
-   
-   .shape-choice label, .shape-choice input {
-       display:block;
-       position:absolute;
-       top:0;
-       left:0;
-       right:0;
-       bottom:0;
-   }
-   
-   .shape-choice input[type="radio"] {
-       opacity:0.011;
-       z-index:100;
-   }
-   
-   .shape-choice input[type="radio"]:checked + label {
-       background:#F4320F;
-   }
-   
-   .shape-choice label {
-        padding:5px;
-        border:1px solid #CCC; 
-        cursor:pointer;
-       z-index:90;
-   }
-   
-   .shape-choice label:hover {
-        background:#DDD;
-   }
+.shape-choice {
+    list-style-type:none;
 
-   .forms {
-    display: block;
-    float: left;
-   }
+}
 
-   .cart-div {
-       margin-top: 10px;
-       padding-left: 5px;
-       font-family: Verdana, Geneva, Tahoma, sans-serif;
-       font-weight: 100;
-       color: #4A4A4A;
-       font-size: 16px;
-       text-align:left;
-   }
+.shape-choice li {
+    float:left;
+    margin:0 5px 5px 0;
+    width:70px;
+    height:30px;
+    position:relative;
+    text-align: center;
+}
+
+.shape-choice label, .shape-choice input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.shape-choice input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.shape-choice input[type="radio"]:checked + label {
+    background:#F4320F;
+}
+
+.shape-choice label {
+    padding:5px;
+    border:1px solid #CCC; 
+    cursor:pointer;
+    z-index:90;
+}
+
+.shape-choice label:hover {
+    background:#DDD;
+}
+
+.forms {
+display: block;
+float: left;
+}
+
+.cart-div {
+    margin-top: 10px;
+    padding-left: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    color: #4A4A4A;
+    font-size: 16px;
+    text-align:left;
+}
 
 
 /* text area icons */
